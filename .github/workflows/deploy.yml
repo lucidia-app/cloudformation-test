@@ -3,11 +3,12 @@ on: [push]
 jobs:
   aws_cdk:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          token: ${{ secrets.LUCIDIA_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: cdk deploy
         uses: youyo/aws-cdk-github-actions@v2
