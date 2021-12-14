@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-          with:
-            fetch-depth: 0
-            token: ${{ secrets.LUCIDIA_PAT }}
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.LUCIDIA_PAT }}
 
       - name: cdk deploy
         uses: youyo/aws-cdk-github-actions@v2
